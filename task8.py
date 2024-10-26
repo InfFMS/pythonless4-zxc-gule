@@ -6,4 +6,12 @@
 # 378
 # Вывод:
 # 2*3*3*3*7
-
+def f(a):
+    if a <= 1:
+        return ""
+    for i in range(2, int(a ** 0.5) + 1):
+        if a % i == 0:
+            return f"{i}*{f(a // i)}"
+    return str(a)
+a= int(input())
+print(f(a))
