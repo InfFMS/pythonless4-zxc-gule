@@ -8,4 +8,20 @@
 # 25 15
 # Вывод:
 # 5 3
-
+a=int(input())
+b=int(input())
+def f(a,b):
+    a1=a
+    b1=b
+    m = 0
+    while m != a1:
+        if a1 > b1:
+            a1 = a1 - b1
+        elif a1 < b1:
+            b1 = b1 - a1
+        if a1 == b1:
+            m = a1
+            break
+    print(a // m, b // m)
+    return ''
+print(f(a,b))
